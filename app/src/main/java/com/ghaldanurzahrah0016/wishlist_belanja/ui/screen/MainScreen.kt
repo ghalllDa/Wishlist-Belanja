@@ -169,18 +169,18 @@ fun ListItem(barang: Barang, onClick: () -> Unit ){
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ){
         Text(
-            text = stringResource(R.string.nama,barang.nama),
+            text = barang.nama,
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontWeight = FontWeight.Bold
         )
         Text(
-            text = stringResource(R.string.jumlah, barang.jumlah),
+            text = stringResource(R.string.label_jumlah, barang.jumlah),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = stringResource(R.string.harga, barang.harga),
+            text = stringResource(R.string.label_harga, barang.harga),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
@@ -207,12 +207,12 @@ fun GridItem(barang: Barang, onClick: () -> Unit) {
                 fontWeight = FontWeight.Bold
             )
             Text(
-                text = barang.jumlah,
+                text = stringResource(R.string.label_jumlah, barang.jumlah),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
             Text(
-                text = barang.harga,
+                text = stringResource(R.string.label_harga, barang.harga),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
