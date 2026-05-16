@@ -99,7 +99,7 @@ fun MainScreen(navController: NavHostController) {
             ) {
                 Icon(
                     imageVector = Icons.Filled.Add,
-                    contentDescription = stringResource(R.string.tambah_catatan),
+                    contentDescription = stringResource(R.string.tambah_barang),
                     tint = MaterialTheme.colorScheme.primary
                 )
             }
@@ -169,18 +169,18 @@ fun ListItem(barang: Barang, onClick: () -> Unit ){
         verticalArrangement = Arrangement.spacedBy(8.dp)
     ){
         Text(
-            text = barang.nama,
+            text = stringResource(R.string.nama,barang.nama),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis,
             fontWeight = FontWeight.Bold
         )
         Text(
-            text = barang.jumlah,
+            text = stringResource(R.string.jumlah, barang.jumlah),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
         Text(
-            text = barang.harga,
+            text = stringResource(R.string.harga, barang.harga),
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )

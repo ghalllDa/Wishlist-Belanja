@@ -24,14 +24,15 @@ class DetailViewModel(private val dao: BarangDao): ViewModel() {
         return dao.getBarangById(id)
     }
 
-    fun update(nama: String, jumlah: String, harga: String) {
+    fun update(id: Long, nama: String, jumlah: String, harga: String) {
         val barang = Barang(
+            id = id,
             nama = nama,
             jumlah = jumlah,
             harga = harga
         )
         viewModelScope.launch(Dispatchers.IO){
-            dao.upadate(barang)
+            dao.update(barang)
         }
     }
 
